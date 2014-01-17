@@ -243,7 +243,12 @@
          case "email": 		
             mask = /^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/i; 			
             break;
-
+		
+        // website
+         case "website": 
+         	mask = /^(ftp:\/\/|http:\/\/|https:\/\/)?(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!-\/]))?$/;
+         	break;
+         	
 		// custom validation example captcha
          case "custom":
             mask = settings.param;
